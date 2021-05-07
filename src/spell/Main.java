@@ -16,20 +16,20 @@ public class Main {
 
     String dictionaryFileName = args[0];
     //String inputWord = args[1];
-    String inputWord = "HELLO";
+    String inputWord = "beaan";
 
-    //
-    //Create an instance of your corrector here
-    //
-   // ISpellCorrector corrector = new SpellCorrector();
 
-   // corrector.useDictionary(dictionaryFileName);
-   // String suggestion = corrector.suggestSimilarWord(inputWord);
-   // if (suggestion == null) {
-   //   suggestion = "No similar word found";
+   // Create an instance of your corrector here
+
+    ISpellCorrector corrector = new SpellCorrector();
+
+    corrector.useDictionary(dictionaryFileName);
+    String suggestion = corrector.suggestSimilarWord(inputWord);
+    if (suggestion == null) {
+      suggestion = "No similar word found";
     }
 
-   // System.out.println("Suggestion is: " + suggestion);
+    System.out.println("Suggestion is: " + suggestion);
   }
 
-//}
+}
